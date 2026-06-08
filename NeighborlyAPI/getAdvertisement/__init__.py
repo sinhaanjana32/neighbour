@@ -4,6 +4,7 @@ import json
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 import logging
+from config import COSMOS_CONNECTION_STRING, DATABASE_NAME, POST_COLLECTION, ADVERTISEMENT_COLLECTION
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
@@ -14,10 +15,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     
     if id:
         try:
-            url = "localhost"  # TODO: Update with appropriate MongoDB connection information
-            client = pymongo.MongoClient(url)
-            database = client['azure']
-            collection = database['advertisements']
+            client = pymongo.MongoClient(COSMOS_CONNECTION_STRING)
+            database = client['DATABASE_NAME']
+            collection = database['ADVERTISEMENTS_COLLECTION']
            
             query = {'_id': ObjectId(id)}
             result = collection.find_one(query)
