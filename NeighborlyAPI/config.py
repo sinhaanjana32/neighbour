@@ -9,3 +9,10 @@ ADVERTISEMENT_COLLECTION = "advertisements"
 POST_COLLECTION = "posts"
 
 EVENTHUB_CONNECTION_STRING = os.environ.get("EVENTHUB_CONNECTION_STRING") or "Endpoint=sb://anjananeighborlyeventhub.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=3FsCThMsa0ULpSMJbpGHW3oZUmewwNs8mIdWcvkRUTCrufYyQ2X39RcsWBJ8andjLfK6hf0zhW0OACDb0IhFcw==;EntityPath=neighborlyevents"
+
+
+
+
+eventhub_connection_string = <sensitive>
+function_app_name = "anjananeighborlyfunc01"
+function_url = "https://anjananeighborlyfunc01.azurewebsites.net/api"

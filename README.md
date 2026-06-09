@@ -262,3 +262,14 @@ Image url: https://picsum.photos/800/600
 
 cd NeighborlyFrontEnd 
 python3 app.py
+
+
+
+
+az webapp config container set \
+  --name anjananeighborlyfrontend01 \
+  --resource-group neighborly-rg \
+  --container-image-name anjananeighborlyacr01.azurecr.io/neighborlyfrontend:v1 \
+  --container-registry-url https://anjananeighborlyacr01.azurecr.io \
+  --container-registry-user anjananeighborlyacr01 \
+  --container-registry-password 9kf5BOM0zlZycteUiKVQC8KEWBbDixZZn63vKtLJ1oVoBuGbbjsBJQQJ99CFACYeBjFEqg7NAAACAZCR4qoY

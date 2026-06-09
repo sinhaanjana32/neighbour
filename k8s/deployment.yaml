@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: neighborlyapi
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: neighborlyapi
+
+  template:
+    metadata:
+      labels:
+        app: neighborlyapi
+
+    spec:
+      containers:
+      - name: neighborlyapi
+        image: anjananeighborlyacr01.azurecr.io/neighborlyapi:v1
+        ports:
+        - containerPort: 80

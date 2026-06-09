@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: neighborlyapi
+
+spec:
+  type: LoadBalancer
+
+  selector:
+    app: neighborlyapi
+
+  ports:
+  - port: 80
+    targetPort: 80
