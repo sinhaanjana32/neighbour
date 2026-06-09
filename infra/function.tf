@@ -41,5 +41,7 @@ resource "azurerm_linux_function_app" "function" {
     FUNCTIONS_WORKER_RUNTIME = "python"
 
     WEBSITE_RUN_FROM_PACKAGE = "1"
+
+  EVENTHUB_CONNECTION_STRING = azurerm_eventhub_authorization_rule.neighborly.primary_connection_string
   }
 }
