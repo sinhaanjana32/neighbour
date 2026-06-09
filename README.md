@@ -242,3 +242,23 @@ RESOURCE_GROUP="<YOUR-RESOURCE-GROUP>"
 # run this command
 az group delete --name $RESOURCE_GROUP
 ```
+
+
+My steps:
+
+terraform
+python3 import_data.py
+
+check function, cosmosdb and all functions
+
+get connection strings from cosmosdb
+
+func azure functionapp publish anjananeighborlyfunc01
+
+run FE
+
+Image url: https://picsum.photos/800/600
+
+
+cd NeighborlyFrontEnd 
+python3 app.py
