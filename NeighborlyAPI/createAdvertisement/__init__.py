@@ -9,8 +9,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if request:
         try:
             client = pymongo.MongoClient(COSMOS_CONNECTION_STRING)
-            database = client['DATABASE_NAME']
-            collection = database['ADVERTISEMENTS_COLLECTION']
+            database = client[DATABASE_NAME]
+            collection = database[ADVERTISEMENT_COLLECTION]
 
             rec_id1 = collection.insert_one(eval(request))
 

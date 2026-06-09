@@ -2,14 +2,14 @@ import azure.functions as func
 import pymongo
 import json
 from bson.json_util import dumps
-from config import COSMOS_CONNECTION_STRING
+from config import ADVERTISEMENT_COLLECTION, COSMOS_CONNECTION_STRING, DATABASE_NAME
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
     try:
         client = pymongo.MongoClient(COSMOS_CONNECTION_STRING)
-        database = client['DATABASE_NAME']
-        collection = database['ADVERTISEMENTS_COLLECTION']
+        database = client[DATABASE_NAME]
+        collection = database[ADVERTISEMENT_COLLECTION]
 
 
 

@@ -11,8 +11,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if request:
         try:
             client = pymongo.MongoClient(COSMOS_CONNECTION_STRING)
-            database = client['DATABASE_NAME']
-            collection = database['ADVERTISEMENTS_COLLECTION']
+            database = client[DATABASE_NAME]
+            collection = database[ADVERTISEMENT_COLLECTION]
 
             filter_query = {'_id': ObjectId(id)}
             update_query = {"$set": eval(request)}

@@ -16,8 +16,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if id:
         try:
             client = pymongo.MongoClient(COSMOS_CONNECTION_STRING)
-            database = client['DATABASE_NAME']
-            collection = database['ADVERTISEMENTS_COLLECTION']
+            database = client[DATABASE_NAME]
+            collection = database[ADVERTISEMENT_COLLECTION]
            
             query = {'_id': ObjectId(id)}
             result = collection.find_one(query)

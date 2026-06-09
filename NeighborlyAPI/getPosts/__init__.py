@@ -12,8 +12,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     try:
         client = pymongo.MongoClient(COSMOS_CONNECTION_STRING)
-        database = client['DATABASE_NAME']
-        collection = database['POST_COLLECTION']
+        database = client[DATABASE_NAME]
+        collection = database[POST_COLLECTION]
 
         result = collection.find({})
         result = dumps(result)

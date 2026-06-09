@@ -3,7 +3,7 @@ import pymongo
 import json
 from bson.json_util import dumps
 from bson.objectid import ObjectId
-from config import COSMOS_CONNECTION_STRING
+from config import COSMOS_CONNECTION_STRING, DATABASE_NAME, POST_COLLECTION
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
@@ -12,8 +12,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if id:
         try:
             client = pymongo.MongoClient(COSMOS_CONNECTION_STRING)
-            database = client['DATABASE_NAME']
-            collection = database['POST_COLLECTION']
+            database = client[DATABASE_NAME]
+            collection = database[POST_COLLECTION]
 
             query = {'_id': ObjectId(id)}
             result = collection.find_one(query)
