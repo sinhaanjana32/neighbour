@@ -1,11 +1,31 @@
-venv
-.venv
-__pycache__
-*.py[cod]
-*$py.class              
+            
 
 
 # VS Code settings
 .vscode/
+
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd       
+venv/Lib/
+venv/Scripts/activate
+venv/Scripts/activate.bat
+venv/Scripts/activate.ps1
+venv/Scripts/activate.fish
+venv/Scripts/Activate.ps1
+venv/Scripts/activate.csh
+venv/Scripts/activate.xsh           
+venv/Lib/site-packages/
+venv/Lib/dist-packages/
+venv/Lib/python*/site-packages/
+venv/Lib/python*/dist-packages/
+venv/Include
+venv/Lib/site-packages
+venv/Lib/dist-packages
+venv/Lib/site-packages
+venv/Lib/python*/dist-packages
 
 
